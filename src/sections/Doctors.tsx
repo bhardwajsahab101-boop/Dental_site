@@ -1,58 +1,52 @@
+"use client";
+
 import { clinicData } from "../data/clinicData";
+import Card from "../components/ui/card";
+import { FadeUp } from "../components/ui/motion";
+import SectionHeading from "../components/ui/section-heading";
 
 export default function Doctors() {
   return (
     <section id="doctors" className="bg-[#f8fbff] py-20">
       <div className="mx-auto max-w-7xl px-6">
+        <SectionHeading
+          eyebrow="Our Doctors"
+          title="Meet Our Experienced Dentists"
+          description="Our professional dental team is dedicated to providing safe, modern, and comfortable treatments."
+        />
 
-        {/* Heading */}
-        <div className="mb-14 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-600">
-            Our Doctors
-          </p>
-
-          <h2 className="mb-4 text-4xl font-bold text-gray-900">
-            Meet Our Experienced Dentists
-          </h2>
-
-          <p className="mx-auto max-w-2xl text-lg text-gray-600">
-            Our professional dental team is dedicated to providing
-            safe, modern, and comfortable treatments.
-          </p>
-        </div>
-
-        {/* Doctors Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
           {clinicData.doctors.map((doctor, index) => (
-            <div
-              key={index}
-              className="overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
-            >
+            <FadeUp key={index} delayMs={index * 70}>
+              <Card className="overflow-hidden p-0">
+                <div className="relative">
+                  <img
+                    loading="lazy"
+                    src={doctor.image}
+                    alt={doctor.name}
+                    className="h-64 w-full object-cover sm:h-80"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-transparent"
+                  />
+                </div>
 
-              {/* Doctor Image */}
-              <img
-                src={doctor.image}
-                alt={doctor.name}
-                className="h-80 w-full object-cover"
-              />
+                <div className="p-6">
+                  <h3 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900">
+                    {doctor.name}
+                  </h3>
 
-              {/* Doctor Info */}
-              <div className="p-6">
-                <h3 className="mb-2 text-2xl font-semibold text-gray-900">
-                  {doctor.name}
-                </h3>
-
-                <p className="text-blue-600">
-                  {doctor.role}
-                </p>
-              </div>
-
-            </div>
+                  <p className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-[13px] font-medium text-blue-700 ring-1 ring-blue-100 sm:text-sm">
+                    {doctor.role}
+                  </p>
+                </div>
+              </Card>
+            </FadeUp>
           ))}
-
         </div>
       </div>
     </section>
   );
 }
+

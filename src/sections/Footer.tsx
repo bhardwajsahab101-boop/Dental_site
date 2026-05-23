@@ -23,27 +23,27 @@ export default function Footer() {
             Quick Links
           </h3>
 
-          <ul className="space-y-3 text-gray-400">
+          <ul className="space-y-3 text-sm text-gray-400">
             <li>
-              <a href="#" className="transition hover:text-white">
+              <a href="/#home" className="transition hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-200">
                 Home
               </a>
             </li>
 
             <li>
-              <a href="#" className="transition hover:text-white">
+              <a href="/#services" className="transition hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-200">
                 Services
               </a>
             </li>
 
             <li>
-              <a href="#" className="transition hover:text-white">
+              <a href="/#doctors" className="transition hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-200">
                 Doctors
               </a>
             </li>
 
             <li>
-              <a href="#" className="transition hover:text-white">
+              <a href="/#contact" className="transition hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-200">
                 Contact
               </a>
             </li>
@@ -86,16 +86,14 @@ export default function Footer() {
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-gray-500 md:flex-row">
-
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm text-gray-500 md:flex-row">
           <p>
             © 2026 {clinicData.clinicName}. All rights reserved.
           </p>
 
-          <p>
+          <p className="text-center md:text-left">
             Designed with care for modern dental clinics.
           </p>
-
         </div>
       </div>
     </footer>

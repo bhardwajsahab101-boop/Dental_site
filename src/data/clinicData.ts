@@ -1,12 +1,12 @@
 export const clinicData = {
   // BASIC INFO
-  clinicName: "City Dental Group",
+  clinicName: "AK Sharma Dental Clinic ",
 
   seo: {
-    title: "City Dental Group NYC",
+    title: "AK Sharma Dental Clinic NYC",
     description:
       "Modern and trusted dental clinic in New York providing complete dental care for your family.",
-  },
+  }, 
 
   // CONTACT INFO
   contact: {
@@ -30,27 +30,27 @@ export const clinicData = {
   navigation: [
     {
       label: "Home",
-      href: "#home",
+      href: "/#home",
     },
 
     {
       label: "Services",
-      href: "#services",
+      href: "/#services",
     },
 
     {
       label: "Doctors",
-      href: "#doctors",
+      href: "/#doctors",
     },
 
     {
       label: "Testimonials",
-      href: "#testimonials",
+      href: "/#testimonials",
     },
 
     {
       label: "Contact",
-      href: "#contact",
+      href: "/#contact",
     },
   ],
 
