@@ -9,8 +9,9 @@ import {
   Calendar,
   Menu,
   X,
-  Activity,
-  LogOut
+  LogOut,
+  Mail,
+  CalendarDays
 } from "lucide-react";
 
 export default function Sidebar() {
@@ -20,6 +21,8 @@ export default function Sidebar() {
   const navigation = [
     { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
     { name: "Appointments", href: "/admin/appointments", icon: Calendar },
+    { name: "Calendar View", href: "/admin/calendar", icon: CalendarDays },
+    { name: "Messages", href: "/admin/messages", icon: Mail },
   ];
 
   const isActive = (href: string) => {
