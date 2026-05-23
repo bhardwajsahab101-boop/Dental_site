@@ -20,6 +20,8 @@ export default function Sidebar() {
   const navigation = [
     { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
     { name: "Appointments", href: "/admin/appointments", icon: Calendar },
+    { name: "Calendar", href: "/admin/calendar", icon: Calendar },
+    { name: "Messages", href: "/admin/messages", icon: Activity },
   ];
 
   const isActive = (href: string) => {
